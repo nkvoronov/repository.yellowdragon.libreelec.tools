@@ -1,5 +1,401 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="tools.poppler"
+       name="poppler"
+       version="9.1.6"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Poppler is a PDF rendering library based on the xpdf-3.0 code base.</summary>
+    <description>
+Poppler is a PDF rendering library based on the xpdf-3.0 code base.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="tools.vlc3"
+       name="Vlc Player 3"
+       version="9.1.67"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>VLC (Version: 3.0.8): is VideoLAN multimedia player and streamer</summary>
+    <description>
+VLC (Version: 3.0.8): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.transmission2"
+       name="Transmission"
+       version="9.1.9"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>transmission: a fast, easy and free BitTorrent client</summary>
+    <description>
+transmission is a fast, easy and free BitTorrent client
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.lcdd"
+       name="LCDproc"
+       version="9.1.112"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>LCDproc: Software to display system information from your Linux/*BSD box on a LCD</summary>
+    <description>
+LCDproc (0.5dev+2018-11-04) is a piece of software that displays real-time system information from your Linux/*BSD box on a LCD. The server supports several serial devices: Matrix Orbital, Crystal Fontz, Bayrad, LB216, LCDM001 (kernelconcepts.de), Wirz-SLI, Cwlinux(.com) and PIC-an-LCD; and some devices connected to the LPT port: HD44780, STV5730, T6963, SED1520 and SED1330. Various clients are available that display things like CPU load, system load, memory usage, uptime, and a lot more.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+107
+- Update to 0.5dev+2018-11-04
+
+106
+- Build with -O3 to avoid undefined symbols
+
+105
+- Rebuild after glibc bump
+
+104
+- Update to 466edd3
+
+103
+- Update to 0.5.8
+
+102
+- Update to c05a7de
+- Reintroduce dm140 driver
+- Build with libugpio
+
+101
+- Update to upstream 1554506
+
+100
+- Initial addon
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.mariadb"
+       name="MariaDB SQL database server"
+       version="9.1.211"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>MariaDB is a community-developed fork of the MySQL.</summary>
+    <description>
+MariaDB (10.4.6) is a fast SQL database server and a drop-in replacement for MySQL.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+103
+- update MariaDB to 10.3.14
+  include mysqldump program
+  add user kodi@localhost to allow localhost connections
+
+102
+- do not change password on addon update
+
+101
+- update MariaDB to 10.3.12
+  removed optimizer_search_depth from config file to speed it up
+  moved some paths for logs to addon home
+  added alias for service name (mariadb == service.mariadb)
+
+100
+- initial version
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="tools.system-tools"
+       name="System Tools"
+       version="9.1.117"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>A bundle of system tools and programs</summary>
+    <description>
+This bundle currently includes autossh, diffutils, dstat, dtach, efibootmgr, encfs, evtest, fdupes, file, getscancodes, hddtemp, hd-idle, hid_mapper, htop, i2c-tools, inotify-tools, jq, lm_sensors, lshw, mc, mrxvt, mtpfs, nmon, p7zip, patch, pv, screen, smartmontools, strace, stress-ng, unrar, usb-modeswitch and vim.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+111
+- updated autossh to 1.4g
+- updated file to d1ff3af
+- updated htop to 3.0.0 Beta5
+- updated jq to 1.6
+- updated lm_sensors to e8afbda
+- updated patch to 2.7.6
+- updated pv to 1.6.6
+- updated smartmontools to 7.0
+- updated strace to 4.26
+- updated stress-ng to 0.09.50
+- updated unrar to 5.6.8
+
+110
+- updated and improved mc (4.8.21)
+- using more compatible "xterm" TERM definition
+- updated efibootmgr to 17
+- fixed screen
+
+109
+- added stress-ng
+
+108
+- added encfs and smartmontools
+- updated autossh to 1.4f
+- updated file to 5.33
+- updated htop to 3.0.0 Beta4
+- updated inotify-tools to 3.20.1
+- updated lm_sensors to 1c48b19
+- updated mc to 4.8.20
+- updated screen to 4.6.2
+- updated strace to 4.22
+- updated unrar to 5.6.3
+
+107
+- added dstat, htop and vim
+- updated difftools to 3.6
+- updated dtach to 0.9
+- updated fdupes to 1.6.1
+- updated file to 5.31
+- updated hd-idle to 1.05
+- updated hddtemp to 0.3-beta16
+- updated hid_mapper to 2.1.0
+- updated libmtp to 1.1.13
+- updated lm_sensors to 0d5ccf6
+- updated lshw to 2.18
+- updated mc to 4.8.19
+- updated mtpfs to fd3864d
+- updated p7zip to 16.02
+- updated strace to 4.17
+- updated unrar to 5.5.5
+
+106
+- updated screen, fix colors issue
+
+104
+- updated file package
+
+103
+- added nmon
+
+102
+- added inotify-tools, mc
+
+101
+- mrxvt can be started from KODI
+- correct mrxvt terminal type
+- make hddtemp work
+
+100
+- Initial Release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="tools.dvb-tools"
+       name="DVB Tools"
+       version="9.1.111"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DVB-Tools: is a bundle of dvb tools and programs</summary>
+    <description>
+This bundle currently includes blindscan-s2, dvb-apps, dvblast, dvbsnoop, mumudvb, szap-s2, tune-s2, t2scan and w_scan.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+105
+- added t2scan
+- updated bitstream to 1.4
+- updated blindscan-s2 to 192eaf0
+- updated dvblast to acf3844
+- updated dvbsnoop to badf61f
+- updated mumudvb to 6153f87
+
+104
+- remove dvb-fe-tool, it's already included in the image
+- updated MuMuDVB to a09373d
+- updated dvblast to 77cfaa8
+
+103
+- added blindscan-s2
+- added dvbsnoop
+- added szap-s2
+- added tune-s2
+- updated dvb-fe-tool to 1.12.5
+- updated MuMuDVB to 596f7db
+
+102
+- added MuMuDVB
+- updated w_scan to 20170107
+- updated dvblast to 3.1
+- updated dvb-fe-tool to 1.12.3
+
+101
+- added w_scan
+
+100
+- Initial Release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.acestream-engine"
+       name="ACE stream engine"
+       version="9.1.13"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>acestream (Version: 3.1.35): This is an innovative media platform of a new generation, which will take you to a new high-quality level of multimedia space on the Internet.</summary>
+    <description>
+acestream (Version: 3.1.35): This is an innovative media platform of a new generation, which will take you to a new high-quality level of multimedia space on the Internet.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
 <addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="9.1" provider-name="YLLOW_DRAGON">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
