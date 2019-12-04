@@ -4,7 +4,7 @@
        version="9.2.0.117"
        provider-name="Team LibreELEC">
   <requires>
-    <import addon="os.libreelec.tv" version="9.1"/>
+    <import addon="os.libreelec.tv" version="9.2"/>
     <import addon="xbmc.python" version="2.1.0"/>
 
   </requires>
