@@ -100,7 +100,7 @@ A bash és zsh funkciók lehetnének rövidebbek is, de a bash környezete nem f
 
 "-s"    Bekapcsolja a lassú terminál módot, ebben a módban a program nem használja a sok energiát felemésztő vonal karaktereket és az un. bővített módot kikapcsolja.
 
-"-t"    Ezt csak akkor használd, ha Slang-gel és terminfo-val fordítottad a programot: a TERMCAP váltózó értékét használja, és nem a rendszer szintű terminál adatbázist.
+"-t"    Ezt csak akkor használd, ha S-Lang-gel és terminfo-val fordítottad a programot: a TERMCAP váltózó értékét használja, és nem a rendszer szintű terminál adatbázist.
 
 "-u"    Nem engedélyezi a konkurrens shell-ek használatát (csak akkor használható, ha a Midnight Commandert a "concurrent shell" támogatással fordították).
 
@@ -1284,7 +1284,7 @@ Színek
 
 A Midnight Commander megpróbálja megállapítani azt, hogy a terminál amelyet használsz, támogatja-e a színhasználatot a terminál adatbázis és a terminál név segítségével. Néha ez összezavarodhat, ezért előfordulhat, hogy neked kell megmondanod azt, hogy színes, vagy színtelen módot használjon a -c illetve a -b kiegészítéssel.
 
-Ha a programot a Slang képernyő kezelővel fordították az ncurses helyett, szintén le fogja ellenőrizni a COLORTERM változó értékét, ha be van állítva, ez olyan hatású, mintha a -c flaggal indítottál volna.
+Ha a programot a S-Lang képernyő kezelővel fordították az ncurses helyett, szintén le fogja ellenőrizni a COLORTERM változó értékét, ha be van állítva, ez olyan hatású, mintha a -c flaggal indítottál volna.
 
 Magadhatod azt a terminálnak, hogy mindíg a színes módot használja a Colors részben color_terminals változónál az indító fájlban. Így a terminál színtámogatásának vizsgálatát a Midnight Commander nem végzi el. Például:
 
@@ -1292,7 +1292,7 @@ Magadhatod azt a terminálnak, hogy mindíg a színes módot használja a Colors
 color_terminals=linux,xterm
 color_terminals=terminal-name1,terminal-name2...
 
-A program mindkét opcióval fordítható (ncurses és slang). Az ncurses nem jelent feltétlenül színes üzemmódot; csak a terminál adatbázist használja.
+A program mindkét opcióval fordítható (ncurses és S-Lang). Az ncurses nem jelent feltétlenül színes üzemmódot; csak a terminál adatbázist használja.
 
 A Midnight Commander lehetőséget nyújt az alapértelmezett színek beállítására. Jelenleg a színek a MC_COLOR_TABLE környezeti változóban, vagy a Colors részben definiálhatók az indító fájlban.
 

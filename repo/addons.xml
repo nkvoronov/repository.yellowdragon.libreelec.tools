@@ -201,7 +201,7 @@ MariaDB (10.4.7) is a fast SQL database server and a drop-in replacement for MyS
 
 <addon id="tools.system-tools"
        name="System Tools"
-       version="9.2.0.117"
+       version="9.2.0.118"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>

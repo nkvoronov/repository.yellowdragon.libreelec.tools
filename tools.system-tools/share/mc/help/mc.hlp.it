@@ -104,7 +104,7 @@ OPZIONI
 
 "-s"    Abilita il modo terminale lento, in questa modalità il programma non disegna le linee e disabilita la modalità prolissa.
 
-"-t"    Usata solo se il codice è stato compilato con Slang e terminfo: fa in modo che il Midnight Commander usi il valore della variabile TERMCAP per le informazioni sul terminale invece delle informazioni di sistema sul database terminali.
+"-t"    Usata solo se il codice è stato compilato con S-Lang e terminfo: fa in modo che il Midnight Commander usi il valore della variabile TERMCAP per le informazioni sul terminale invece delle informazioni di sistema sul database terminali.
 
 "-u"    Disabilita l'uso della shell concorrente (ha senso solo se il Midnight Commander è stato compilato con il supporto per la shell concorrente).
 
@@ -1299,14 +1299,14 @@ Colori
 
 Il Midnight Commander tenta di stabilire se il terminale corrente supporta i colori usando il database dei terminali e il nome del terminale corrente. Capita che possa sbagliarsi, perciò si può essere costretti a forzare la modalità a colori o a disabilitarla usando rispettivamente le opzioni -c e -b.
 
-Se il programma è compilato con il manager dello schermo Slang invece che ncurses, controllerà se è impostata anche la variabile COLORTERM, con lo stesso effetto dell'opzione -c.
+Se il programma è compilato con il manager dello schermo S-Lang invece che ncurses, controllerà se è impostata anche la variabile COLORTERM, con lo stesso effetto dell'opzione -c.
 
 E' possibile specificare i terminali su cui si vuole forzare sempre la modalità colore aggiungendo la variabile color_terminals nella sezione Colors del file di inizializzazione. Questo previene il Midnight Commander dal tentare di controllare se il terminale supporta i colori. Per esempio:
 [Colors]
 color_terminals=linux,xterm
 color_terminals=nome_terminale-1,nome-terminale-2...
 
-Il programma può essere compilato sia con il supporto di ncurses che di slang ma ncurses non fornisce alcun modo per forzare la modalità colore: ncurses userà solo le informazioni nel database dei terminali.
+Il programma può essere compilato sia con il supporto di ncurses che di S-Lang ma ncurses non fornisce alcun modo per forzare la modalità colore: ncurses userà solo le informazioni nel database dei terminali.
 
 Il Midnight Commander fornisce un modo per cambiare i colori predefiniti. Attualmente i colori sono configurati usando la variabile ambiente MC_COLOR_TABLE  o la sezione Colors nel file di inizializzazione.
 

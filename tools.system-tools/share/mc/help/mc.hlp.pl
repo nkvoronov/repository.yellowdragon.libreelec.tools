@@ -112,7 +112,7 @@ alias mc 'setenv MC `/usr/bin/mc -P !*`; cd $MC; unsetenv MC'
 
 -s      Włącza tryb powolnego terminala, w którym program nie będzie rysował zbyt obciążających znaków graficznych oraz wyłączy opcję weryfikacji.
 
--t      Używane tylko jeśli kod był skompilowany przy użyciu Slanga i terminfo: powoduje, że Midnight Commander będzie używać zmiennej środowiskowej TERMCAP do pokazywania informacji terminala, zamiast informacji w systemowej bazie typów terminali.
+-t      Używane tylko jeśli kod był skompilowany przy użyciu S-Langa i terminfo: powoduje, że Midnight Commander będzie używać zmiennej środowiskowej TERMCAP do pokazywania informacji terminala, zamiast informacji w systemowej bazie typów terminali.
 
 -u      Wyłącza używanie równoległej powłoki (ma sens tylko jeśli Midnight Commander był kompilowany z obsługą równoległych powłok).
 
@@ -1377,14 +1377,14 @@ Kolory
 
 Midnight Commander próbuje sprawdzić czy twój terminal obsługuje kolory używając bazy danych terminali. Czasami jest to zmieniane przez różne flagi startowe, np. możesz wymusić wyświetlanie czarno-białe lub kolorowe startując z opcją odpowiednio -b i -c.
 
-Jeśli program jest skompilowany z menedżerem ekranu Slang zamiast ncurses, sprawdzi on również wartość zmiennej COLORTERM. Jeśli jest ustawiona, ma takie samo znaczenie jak opcja -c.
+Jeśli program jest skompilowany z menedżerem ekranu S-Lang zamiast ncurses, sprawdzi on również wartość zmiennej COLORTERM. Jeśli jest ustawiona, ma takie samo znaczenie jak opcja -c.
 
 Możesz wybrać terminale, które zawsze żądają wyświetlania w kolorze, poprzez dodanie ich do pozycji color_terminals w sekcji pliku startującego. Uchroni to Midnight Commandera przed próbami odkrycia typu twojego terminala. Na przykład
 [Colors]
 color_terminals=linux,xterm
 color_terminals=terminal-name1,terminal-name2...
 
-Program może być skompilowany zarówno z bibliotekami slang jak i ncurses. Ncurses nie obsługuje metody wymuszania wyświetlania, zawsze sprawdza w bazie danych terminali.
+Program może być skompilowany zarówno z bibliotekami S-Lang jak i ncurses. Ncurses nie obsługuje metody wymuszania wyświetlania, zawsze sprawdza w bazie danych terminali.
 
 Midnight Commander umożliwia również zmianę standardowych barw ekranu. Aktualnie kolory są skonfigurowane przy użyciu zmiennej MC_COLOR_TABLE w sekcji Colors pliku startowego.
 

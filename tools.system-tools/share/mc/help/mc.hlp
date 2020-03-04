@@ -143,49 +143,13 @@ OPTIONS
         Print the last working directory to the specified file. This option is not meant to be used directly. Instead, it's used from a special shell script that automatically changes the current directory of the shell to the last directory Midnight Commander was in. Source the file /usr/lib/mc/mc.sh (bash and zsh users) or /usr/lib/mc.csh (tcsh users) respectively to define mc as an alias to the appropriate shell script.
 
 -s, --slow
-        Set alternative mode drawing of frameworks. If the section [Lines] is not filled, the symbol for the pseudographics frame is a space, otherwise the frame characters are taken from following parameters. You can redefine the following variables:
-
-lefttop left-top corner
-
-righttop
-        right-top corner
-
-centertop
-        center-top cross
-
-centerbottom
-        center-bottom cross
-
-leftbottom
-        left-bottom corner
-
-rightbottom
-        right-bottom corner
-
-leftmiddle
-        left-middle cross
-
-rightmiddle
-        right-middle cross
-
-centermiddle
-        center cross
-
-horiz   default horizontal line
-
-vert    default vertical line
-
-thinhoriz
-        thin horizontal line
-
-thinvert
-        thin vertical line
+        Turn on the slow terminal mode, in this mode the program will not draw expensive line drawing characters and will toggle verbose mode off.
 
 -S arg, --skin=arg
         Specify a name of skin in the command line. Technology of skins is documented in the SkinsSkins section.
 
 -t, --termcap
-        Used only if the code was compiled with Slang and terminfo: it makes Midnight Commander use the value of the TERMCAP variable for the terminal information instead of the information on the system wide terminal database
+        Used only if the code was compiled with S-Lang and terminfo: it makes Midnight Commander use the value of the TERMCAP variable for the terminal information instead of the information on the system wide terminal database
 
 -u, --nosubshell
         Disable use of the concurrent shell (only makes sense if Midnight Commander has been built with concurrent shell support).
@@ -1612,13 +1576,13 @@ EXTernal File System
 
 Extfs filesystems can be divided into two categories:
 
-1. Stand-alone filesystems, which are not associated with any existing file. They represent certain system-wide data as a directory tree. You can invoke them by typing 'cd fsname://' where fsname is an extfs short name (see below). Examples of such filesystems include audio (list audio tracks on the CD) or apt (list of all Debian packages in the system).
+1. Stand-alone filesystems, which are not associated with any existing file. They represent certain system-wide data as a directory tree. You can invoke them by typing "cd fsname://" where fsname is an extfs short name (see below). Examples of such filesystems include audio (list audio tracks on the CD) or apt (list of all Debian packages in the system).
 
 For example, to list CD-Audio tracks on your CD-ROM drive, type
 
   cd audio://
 
-2. 'Archive' filesystems (like rpm, patchfs and more), which represent contents of a file as a directory tree. It can consist of 'real' files compressed in an archive (urar, rpm) or virtual files, like messages in a mailbox (mailfs) or parts of a patch (patchfs). To access such filesystems 'fsname://' should be appended to the archive name. Note that the archive itself can be on another vfs.
+2. 'Archive' filesystems (like rpm, patchfs and more), which represent contents of a file as a directory tree. It can consist of 'real' files compressed in an archive (urar, rpm) or virtual files, like messages in a mailbox (mailfs) or parts of a patch (patchfs). To access such filesystems fsname:// should be appended to the archive name. Note that the archive itself can be on another vfs.
 
 For example, to list contents of a zip archive documents.zip type
 
@@ -1664,7 +1628,7 @@ Colors
 
 Midnight Commander will try to detect if your terminal supports color using the terminal database and your terminal name. Sometimes it gets confused, so you may force color mode or disable color mode using the -c and -b flag respectively.
 
-If the program is compiled with the Slang screen manager instead of ncurses, it will also check the variable COLORTERM, if it is set, it has the same effect as the -c flag.
+If the program is compiled with the S-Lang screen manager instead of ncurses, it will also check the variable COLORTERM, if it is set, it has the same effect as the -c flag.
 
 You may specify terminals that always force color mode by adding the color_terminals variable to the Colors section of the initialization file. This will prevent Midnight Commander from trying to detect if your terminal supports color. Example:
 
@@ -1672,7 +1636,7 @@ You may specify terminals that always force color mode by adding the color_term
 color_terminals=linux,xterm
 color_terminals=terminal-name1,terminal-name2...
 
-The program can be compiled with both ncurses and slang, ncurses does not provide a way to force color mode: ncurses uses just the information in the terminal database.
+The program can be compiled with both ncurses and S-Lang, ncurses does not provide a way to force color mode: ncurses uses just the information in the terminal database.
 
 Midnight Commander provides a way to change the default colors. Currently the colors are configured using the environment variable MC_COLOR_TABLE or the Colors section in the initialization file.
 
@@ -1887,7 +1851,7 @@ Draw lines
 
 Lines sets in section [Lines] into skin-file. By default single lines are used, but you may redefine to usage of any utf-8 symbols (like to lines, for example).
 
-WARNING!!! When you build Midnight Commander with the Ncurses screen library usage of drawing lines is limited! Possible only drawing a single lines. For all questions and comments please contact the developers of Ncurses.
+WARNING!!! When you build Midnight Commander with the ncurses screen library usage of drawing lines is limited! Possible only drawing a single lines. For all questions and comments please contact the developers of ncurses.
 
 Descriptions of parameters [Lines]:
 
@@ -1992,6 +1956,9 @@ These variables may be set in your ~/.config/mc/ini file:
 
 only_leading_plus_minus
         Allow special treatment for '+', '-', '*' in the command line (select, unselect, reverse selection) only if the command line is empty. You don't need to quote those characters in the middle of the command line. On the other hand, you cannot use them to change selection when the command line is not empty.
+
+alternate_plus_minus
+        If true, use '+', '-', '\' and '*' keys normally. For select/unselect, use 'M-+', 'M--' and 'M-*'.
 
 show_output_starts_shell
         This variable only works if you are not using the subshell support. When you use the C-o keystroke to go back to the user screen, if this one is set, you will get a fresh shell. Otherwise, pressing any key will bring you back to Midnight Commander.

@@ -184,7 +184,7 @@ OPCIONES
         Permite elegir un «skin» o apariencia para mc. La configuración de las características de visualización (colores, líneas, etc.) se explica detalladamente en la sección SkinsSkins.
 
 -t, --termcap
-        Usado solo si el código fue compilado con Slang y terminfo: hace que Midnight Commander use el valor de la variable de entorno TERMCAP para obtener la información del terminal, en vez de la base de datos de terminales del sistema.
+        Usado solo si el código fue compilado con S-Lang y terminfo: hace que Midnight Commander use el valor de la variable de entorno TERMCAP para obtener la información del terminal, en vez de la base de datos de terminales del sistema.
 
 -u, --nosubshell
         Deshabilita el uso de shell concurrente (solo tiene sentido si este Midnight Commander fue construido con soporte de shell concurrente).
@@ -1598,7 +1598,7 @@ Colores
 
 Midnight Commander intentará determinar si nuestro terminal soporta el uso de color utilizando la base de datos de terminales y nuestro nombre de terminal. Algunas veces estará confundido, por lo que deberemos forzar el modo en color o deshabilitar el modo de color usando el argumento -c y -b respectivamente.
 
-Si el programa está compilado con el gestor pantallas Slang en lugar de ncurses, también chequeará la variable COLORTERM, si existe, lo que tiene el mismo efecto que la opción -c.
+Si el programa está compilado con el gestor pantallas S-Lang en lugar de ncurses, también chequeará la variable COLORTERM, si existe, lo que tiene el mismo efecto que la opción -c.
 
 Podemos especificar a los terminales que siempre fuercen el modo en color añadiendo la variable color_terminals a la sección Colors del archivo de inicialización. Esto evitará que Midnight Commander intente la detección de soporte de color. Ejemplo:
 
@@ -1606,7 +1606,7 @@ Podemos especificar a los terminales que siempre fuercen el modo en color añadi
 color_terminals=linux,xterm
 color_terminals=nombre-terminal1,nombre-terminal2...
 
-El programa puede compilarse con ncurses y slang, ncurses no ofrece la posibilidad de forzar el modo en color: ncurses utiliza la información de la base de datos de terminales.
+El programa puede compilarse con ncurses y S-Lang, ncurses no ofrece la posibilidad de forzar el modo en color: ncurses utiliza la información de la base de datos de terminales.
 
 Midnight Commander ofrece una forma de cambiar los colores por defecto. Actualmente los colores se configuran a través de la variable de entorno MC_COLOR_TABLE o en la sección Colors del archivo de inicialización.
 
@@ -1801,7 +1801,7 @@ Trazado de líneas
 
 Trazos de líneas de la sección [Lines] del archivo de skins. Por defecto se utilizan líneas sencillas, pero se pueden redefinir empleando cualquier símbolo utf-8 (por ejemplo, líneas dobles).
 
-¡¡¡ATENCIÓN!!! Si se compila Midnight Commander empleando la biblioteca de pantalla Ncurses, entonces el trazado de líneas está limitado. Es posible que solo se puedan utilizar líneas simples. Para consultas y comentarios contactar con los desarrolladores de Ncurses.
+¡¡¡ATENCIÓN!!! Si se compila Midnight Commander empleando la biblioteca de pantalla ncurses, entonces el trazado de líneas está limitado. Es posible que solo se puedan utilizar líneas simples. Para consultas y comentarios contactar con los desarrolladores de ncurses.
 
 Descripción de parámetros de la sección [Lines]:
 
