@@ -64,39 +64,6 @@ VLC (Version: 3.0.8): is the VideoLAN project's media player. It plays MPEG, MPE
   </extension>
 </addon>
 
-<addon id="tools.aspnet-runtime3"
-       name=".AspNet Core Runtime"
-       version="9.2.0.110"
-       provider-name="Anton Voyl (awiouy)">
-  <requires>
-    <import addon="os.libreelec.tv" version="9.2"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>ASP.NET Core Runtime</summary>
-    <description>
-The ASP.NET Core Runtime (3.1.2) enables you to run existing web/server applications. On Windows, we recommended installing the Hosting Bundle, which includes the .NET Core Runtime and IIS support.
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-110
-- Initial release
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
 <addon id="service.transmission2"
        name="Transmission"
        version="9.2.0.9"
