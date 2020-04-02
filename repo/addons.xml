@@ -399,7 +399,7 @@ This bundle currently includes blindscan-s2, dvb-apps, dvblast, dvbsnoop, mumudv
 
 <addon id="service.acestream-engine"
        name="ACE stream engine"
-       version="9.2.0.14"
+       version="9.2.0.15"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>
