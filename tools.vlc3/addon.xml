@@ -12,9 +12,9 @@
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>VLC (Version: 3.0.10): is VideoLAN multimedia player and streamer</summary>
+    <summary>VLC (Version: 3.0.11): is VideoLAN multimedia player and streamer</summary>
     <description>
-VLC (Version: 3.0.10): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
+VLC (Version: 3.0.11): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
     </description>
     <disclaimer>
 
