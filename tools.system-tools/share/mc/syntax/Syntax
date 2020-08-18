@@ -46,7 +46,7 @@ include ini.syntax
 file ..\*\\.((?i:pl|pm|psgi)|t)$ Perl\sProgram ^#!.\*([\s/]perl|/usr/bin/perl)
 include perl.syntax
 
-file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/home/nikolay/devel/LibreELEC.tv/build.LibreELEC-Generic.x86_64-9.2.3/toolchain/bin/python)
+file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/home/nikolay/devel/LibreELEC.tv/build.LibreELEC-Generic.x86_64-9.2.4/toolchain/bin/python)
 include python.syntax
 
 file ..\*\\.(pyx|pxd|pxi)$ Cython\sor\sPyrex\sProgram
