@@ -23,12 +23,12 @@ delimiter |
 DROP PROCEDURE IF EXISTS AddGeometryColumn;
 DROP PROCEDURE IF EXISTS DropGeometryColumn;
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE AddGeometryColumn(catalog varchar(64), t_schema varchar(64),
+CREATE DEFINER=`mariadb.sys`@`localhost` PROCEDURE AddGeometryColumn(catalog varchar(64), t_schema varchar(64),
    t_name varchar(64), geometry_column varchar(64), t_srid int) SQL SECURITY INVOKER
 begin
   set @qwe= concat('ALTER TABLE ', t_schema, '.', t_name, ' ADD ', geometry_column,' GEOMETRY REF_SYSTEM_ID=', t_srid); PREPARE ls from @qwe; execute ls; deallocate prepare ls; end |
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE DropGeometryColumn(catalog varchar(64), t_schema varchar(64),
+CREATE DEFINER=`mariadb.sys`@`localhost` PROCEDURE DropGeometryColumn(catalog varchar(64), t_schema varchar(64),
    t_name varchar(64), geometry_column varchar(64)) SQL SECURITY INVOKER
 begin
   set @qwe= concat('ALTER TABLE ', t_schema, '.', t_name, ' DROP ', geometry_column); PREPARE ls from @qwe; execute ls; deallocate prepare ls; end |

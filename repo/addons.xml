@@ -187,7 +187,7 @@ LCDproc (0.5dev+2018-11-04) is a piece of software that displays real-time syste
 
 <addon id="service.mariadb"
        name="MariaDB SQL database server"
-       version="9.2.0.214"
+       version="9.2.0.215"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>
@@ -200,7 +200,7 @@ LCDproc (0.5dev+2018-11-04) is a piece of software that displays real-time syste
   <extension point="xbmc.addon.metadata">
     <summary>MariaDB is a community-developed fork of the MySQL.</summary>
     <description>
-MariaDB (10.4.7) is a fast SQL database server and a drop-in replacement for MySQL.
+MariaDB (10.5.5) is a fast SQL database server and a drop-in replacement for MySQL.
     </description>
     <disclaimer>
 
