@@ -97,38 +97,6 @@ The ASP.NET Core Runtime (3.1.7) enables you to run existing web/server applicat
   </extension>
 </addon>
 
-<addon id="service.transmission2"
-       name="Transmission"
-       version="9.2.0.9"
-       provider-name="Team LibreELEC">
-  <requires>
-    <import addon="os.libreelec.tv" version="9.2"/>
-    <import addon="xbmc.python" version="2.1.0"/>
-
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>transmission: a fast, easy and free BitTorrent client</summary>
-    <description>
-transmission is a fast, easy and free BitTorrent client
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
 <addon id="service.lcdd"
        name="LCDproc"
        version="9.2.0.112"
@@ -388,6 +356,38 @@ This bundle currently includes blindscan-s2, dvb-apps, dvblast, dvbsnoop, mumudv
 
 100
 - Initial Release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.transmission3"
+       name="Transmission"
+       version="9.2.0.11"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="os.libreelec.tv" version="9.2"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>transmission: a fast, easy and free BitTorrent client</summary>
+    <description>
+transmission is a fast, easy and free BitTorrent client
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
     </news>
     <assets>
       <icon>resources/icon.png</icon>
