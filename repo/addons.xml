@@ -34,7 +34,7 @@ Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 
 <addon id="tools.vlc3"
        name="Vlc Player 3"
-       version="9.2.0.76"
+       version="9.2.0.78"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>
@@ -202,7 +202,7 @@ MariaDB (10.5.6) is a fast SQL database server and a drop-in replacement for MyS
 
 <addon id="tools.system-tools"
        name="System Tools"
-       version="9.2.0.119"
+       version="9.2.0.120"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>
