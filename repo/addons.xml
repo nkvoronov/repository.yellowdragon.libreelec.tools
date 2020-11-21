@@ -155,7 +155,7 @@ LCDproc (0.5dev+2018-11-04) is a piece of software that displays real-time syste
 
 <addon id="service.mariadb"
        name="MariaDB SQL database server"
-       version="9.2.0.216"
+       version="9.2.0.217"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="os.libreelec.tv" version="9.2"/>
