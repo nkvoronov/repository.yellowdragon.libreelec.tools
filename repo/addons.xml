@@ -327,6 +327,37 @@ transmission(3.00) is a fast, easy and free BitTorrent client
   </extension>
 </addon>
 
+<addon id="service.acestream-engine"
+       name="ACE stream engine"
+       version="10.0.15"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>acestream (Version: 3.1.49): This is an innovative media platform of a new generation, which will take you to a new high-quality level of multimedia space on the Internet.</summary>
+    <description>
+acestream (Version: 3.1.49): This is an innovative media platform of a new generation, which will take you to a new high-quality level of multimedia space on the Internet.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
 <addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="10.0" provider-name="YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
