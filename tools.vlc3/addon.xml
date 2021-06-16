@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="tools.vlc3"
        name="Vlc Player 3"
-       version="10.0.81"
+       version="10.0.83"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -11,9 +11,9 @@
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>VLC (Version: 3.0.12): is VideoLAN multimedia player and streamer</summary>
+    <summary>VLC (Version: 3.0.15): is VideoLAN multimedia player and streamer</summary>
     <description>
-VLC (Version: 3.0.12): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
+VLC (Version: 3.0.15): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
     </description>
     <disclaimer>
 
