@@ -1,4 +1,4 @@
-languages czech=cze latin2, danish=dan latin1, dutch=nla latin1, english=eng latin1, estonian=est latin7, french=fre latin1, german=ger latin1, greek=greek greek, hungarian=hun latin2, italian=ita latin1, japanese=jpn ujis, korean=kor euckr, norwegian-ny=norwegian-ny latin1, norwegian=nor latin1, polish=pol latin2, portuguese=por latin1, romanian=rum latin2, russian=rus koi8r, serbian=serbian cp1250, slovak=slo latin2, spanish=spa latin1, swedish=swe latin1, ukrainian=ukr koi8u, bulgarian=bgn cp1251, hindi=hindi utf8;
+languages czech=cze latin2, danish=dan latin1, dutch=nla latin1, english=eng latin1, estonian=est latin7, french=fre latin1, german=ger latin1, greek=greek greek, hungarian=hun latin2, italian=ita latin1, japanese=jpn ujis, korean=kor euckr, norwegian-ny=norwegian-ny latin1, norwegian=nor latin1, polish=pol latin2, portuguese=por latin1, romanian=rum latin2, russian=rus koi8r, serbian=serbian cp1250, slovak=slo latin2, spanish=spa latin1, swedish=swe latin1, ukrainian=ukr koi8u, bulgarian=bgn cp1251, hindi=hindi utf8mb3;
 
 default-language eng
 
@@ -6636,8 +6636,8 @@ ER_BINLOG_UNSAFE_CREATE_SELECT_AUTOINC
 ER_BINLOG_UNSAFE_INSERT_TWO_KEYS
   eng "INSERT... ON DUPLICATE KEY UPDATE  on a table with more than one UNIQUE KEY is unsafe"
 
-ER_TABLE_IN_FK_CHECK
-  eng "Table is being used in foreign key check"
+ER_UNUSED_28
+  eng "You should never see it"
 
 ER_UNUSED_1
   eng "You should never see it"
@@ -7549,13 +7549,10 @@ ER_ALTER_OPERATION_NOT_SUPPORTED_REASON_GIS
 # MariaDB extra error numbers starts from 4000
 skip-to-error-number 4000
 
-ER_COMMULTI_BADCONTEXT 0A000
-        eng "COM_MULTI can't return a result set in the given context"
-        ger "COM_MULTI kann im gegebenen Kontext keine Ergebnismenge zurückgeben"
-        ukr "COM_MULTI не може повернути результати у цьому контексті"
-ER_BAD_COMMAND_IN_MULTI
-        eng "Command '%s' is not allowed for COM_MULTI"
-        ukr "Команда '%s' не дозволена для COM_MULTI"
+ER_UNUSED_26 0A000
+        eng "This error never happens"
+ER_UNUSED_27
+        eng "This error never happens"
 ER_WITH_COL_WRONG_LIST
         eng "WITH column list and SELECT field list have different column counts"
 ER_TOO_MANY_DEFINITIONS_IN_WITH_CLAUSE
@@ -7651,8 +7648,8 @@ ER_JSON_PATH_ARRAY
         eng "JSON path should end with an array identifier in argument %d to function '%s'"
 ER_JSON_ONE_OR_ALL
         eng "Argument 2 to function '%s' must be "one" or "all"."
-ER_UNSUPPORT_COMPRESSED_TEMPORARY_TABLE
-	eng "CREATE TEMPORARY TABLE is not allowed with ROW_FORMAT=COMPRESSED or KEY_BLOCK_SIZE."
+ER_UNSUPPORTED_COMPRESSED_TABLE
+	eng "InnoDB refuses to write tables with ROW_FORMAT=COMPRESSED or KEY_BLOCK_SIZE."
 ER_GEOJSON_INCORRECT
         eng "Incorrect GeoJSON format specified for st_geomfromgeojson function."
 ER_GEOJSON_TOO_FEW_POINTS
@@ -7954,7 +7951,7 @@ ER_WARN_HISTORY_ROW_START_TIME
 ER_PART_STARTS_BEYOND_INTERVAL
         eng "%`s: STARTS is later than query time, first history partition may exceed INTERVAL value"
 ER_GALERA_REPLICATION_NOT_SUPPORTED
-        eng "DDL-statement is forbidden as table storage engine does not support Galera replication"
+        eng "Galera replication not supported"
 ER_LOAD_INFILE_CAPABILITY_DISABLED
         eng "The used command is not allowed because the MariaDB server or client has disabled the local infile capability"
         rum "Comanda folosită nu este permisă deoarece clientul sau serverul MariaDB a dezactivat această capabilitate"
@@ -7977,3 +7974,21 @@ ER_NOT_ALLOWED_IN_THIS_CONTEXT
         eng "'%-.128s' is not allowed in this context"
 ER_DATA_WAS_COMMITED_UNDER_ROLLBACK
         eng "Engine %s does not support rollback. Changes were committed during rollback call"
+ER_PK_INDEX_CANT_BE_IGNORED
+        eng "A primary key cannot be marked as IGNORE"
+ER_BINLOG_UNSAFE_SKIP_LOCKED
+	eng "SKIP LOCKED makes this statement unsafe"
+ER_JSON_TABLE_ERROR_ON_FIELD
+        eng "Field '%s' can't be set for JSON_TABLE '%s'."
+ER_JSON_TABLE_ALIAS_REQUIRED
+        eng "Every table function must have an alias."
+ER_JSON_TABLE_SCALAR_EXPECTED
+        eng "Can't store an array or an object in the scalar column '%s' of JSON_TABLE '%s'."
+ER_JSON_TABLE_MULTIPLE_MATCHES
+        eng "Can't store multiple matches of the path in the column '%s' of JSON_TABLE '%s'."
+ER_WITH_TIES_NEEDS_ORDER
+        eng "FETCH ... WITH TIES requires ORDER BY clause to be present"
+ER_REMOVED_ORPHAN_TRIGGER
+        eng "Dropped orphan trigger '%-.64s', originally created for table: '%-.192s'"
+ER_STORAGE_ENGINE_DISABLED
+        eng "Storage engine %s is disabled"
