@@ -2,7 +2,7 @@
 <addons>
 <addon id="tools.poppler"
        name="poppler"
-       version="10.0.9"
+       version="10.0.0.9"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -33,7 +33,7 @@ Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 
 <addon id="tools.vlc3"
        name="Vlc Player 3"
-       version="10.0.84"
+       version="10.0.0.85"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -64,7 +64,7 @@ VLC (Version: 3.0.16): is the VideoLAN project's media player. It plays MPEG, MP
 
 <addon id="service.lcdd"
        name="LCDproc"
-       version="10.0.112"
+       version="10.0.0.112"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -122,7 +122,7 @@ LCDproc (0.5dev+2020-07-21) is a piece of software that displays real-time syste
 
 <addon id="service.mariadb"
        name="MariaDB SQL database server"
-       version="10.0.222"
+       version="10.0.0.222"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -171,7 +171,7 @@ MariaDB (10.6.4) is a fast SQL database server and a drop-in replacement for MyS
 
 <addon id="tools.system-tools"
        name="System Tools"
-       version="10.0.122"
+       version="10.0.0.122"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -337,7 +337,7 @@ This bundle currently includes autossh, diffutils, dstat, dtach, efibootmgr, enc
 
 <addon id="tools.dvb-tools"
        name="DVB Tools"
-       version="10.0.111"
+       version="10.0.0.111"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -409,7 +409,7 @@ This bundle currently includes blindscan-s2, dvb-apps, dvblast, dvbsnoop, mumudv
 
 <addon id="service.transmission3"
        name="Transmission"
-       version="10.0.11"
+       version="10.0.0.11"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -440,7 +440,7 @@ transmission(3.00) is a fast, easy and free BitTorrent client
 
 <addon id="service.acestream-engine"
        name="ACE stream engine"
-       version="10.0.15"
+       version="10.0.0.15"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -469,14 +469,14 @@ acestream (Version: 3.1.49): This is an innovative media platform of a new gener
   </extension>
 </addon>
 
-<addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="10.0" provider-name="YLLOW_DRAGON">
+<addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="10.0.0" provider-name="YLLOW_DRAGON">
 	<requires>
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
 	<extension point="xbmc.addon.repository" name="LibreELEC Tools Yellow Dragon Repository">
-		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0/repo/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0/repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0/repo/</datadir>
+		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/</datadir>
 		<hashes>false</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">
