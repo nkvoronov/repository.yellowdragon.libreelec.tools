@@ -33,7 +33,7 @@ Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 
 <addon id="tools.vlc3"
        name="Vlc Player 3"
-       version="10.0.0.86"
+       version="10.0.0.186"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
