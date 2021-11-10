@@ -33,7 +33,7 @@ Poppler is a PDF rendering library based on the xpdf-3.0 code base.
 
 <addon id="tools.vlc3"
        name="Vlc Player 3"
-       version="10.0.0.85"
+       version="10.0.0.86"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -122,7 +122,7 @@ LCDproc (0.5dev+2020-07-21) is a piece of software that displays real-time syste
 
 <addon id="service.mariadb"
        name="MariaDB SQL database server"
-       version="10.0.0.222"
+       version="10.0.0.223"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -134,7 +134,7 @@ LCDproc (0.5dev+2020-07-21) is a piece of software that displays real-time syste
   <extension point="xbmc.addon.metadata">
     <summary>MariaDB is a community-developed fork of the MySQL.</summary>
     <description>
-MariaDB (10.6.4) is a fast SQL database server and a drop-in replacement for MySQL.
+MariaDB (10.6.5) is a fast SQL database server and a drop-in replacement for MySQL.
     </description>
     <disclaimer>
 
@@ -171,7 +171,7 @@ MariaDB (10.6.4) is a fast SQL database server and a drop-in replacement for MyS
 
 <addon id="tools.system-tools"
        name="System Tools"
-       version="10.0.0.122"
+       version="10.0.0.123"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -190,6 +190,27 @@ This bundle currently includes autossh, diffutils, dstat, dtach, efibootmgr, enc
     </disclaimer>
     <platform>all</platform>
     <news>
+125
+- Update mc to 4.8.27
+
+124
+- Include bottom (btm) in Generic
+
+123
+- Update stress-ng to 0.12.11
+- Update unrar to 6.0.7
+- Update vim to 8.2.2879
+
+122
+- Added bottom (btm) (successor to ytop) - all arch except Generic
+- Update file to 5.40
+- Update mc to 4.8.26
+- Update mtpfs to 2021-05-14
+- Update oniguruma to 6.9.7.1
+- Update stress-ng to 0.12.09
+- Update unrar to 6.0.6
+- Update vim to 8.2.2879
+
 121
 - remove strace
 

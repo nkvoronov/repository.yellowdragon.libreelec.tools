@@ -107,6 +107,7 @@
 ### Changes ###
 #
 # Reorganization: 2012-03-07 Slava Zanko <slavazanko@gmail.com>
+#                 2021-03-28 Andrew Borodin <aborodin@vmail.ru>
 
 
 ### GIT Repo ###
@@ -117,6 +118,7 @@ regex/^\[git\]
 
 
 ### Archives ###
+# Since we use "file -z", we should use regex/ and shell/ at first, then type/.
 
 # .tgz, .tpz, .tar.gz, .tar.z, .tar.Z, .ipk, .gem
 regex/\.t([gp]?z|ar\.g?[zZ])$|\.ipk$|\.gem$
@@ -170,16 +172,6 @@ regex/\.qp[rk]$
 shell/i/.tar
 	Open=%cd %p/utar://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view tar
-
-# lha
-type/^LHa\ .*archive
-	Open=%cd %p/ulha://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lha
-
-# PAK
-type/^PAK\ .*archive
-	Open=%cd %p/unar://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view pak
 
 # arj
 regex/i/\.a(rj|[0-9][0-9])$
@@ -300,7 +292,6 @@ shell/i/.iso
 	Open=%cd %p/iso9660://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view iso9660
 
-
 regex/\.(diff|patch)$
 	Open=%cd %p/patchfs://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view cat
@@ -316,6 +307,102 @@ shell/i/.lib
 	Open=%cd %p/ulib://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view lib
 
+# ace
+shell/i/.ace
+	Open=%cd %p/uace://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view ace
+	Extract=unace x %f
+
+# arc
+shell/i/.arc
+	Open=%cd %p/uarc://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view arc
+	Extract=arc x %f '*'
+	Extract (with flags)=I=%{Enter any Arc flags:}; if test -n "$I"; then arc x $I %f; fi
+
+# zip
+shell/i/.zip
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# zoo
+shell/i/.zoo
+	Open=%cd %p/uzoo://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zoo
+
+# lz4
+regex/\.lz4$
+	Open=/usr/lib/mc/ext.d/archive.sh view lz4 %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz4
+
+# WIM
+shell/i/\.wim
+	Open=%cd %p/uwim://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view wim
+
+# gzip
+type/\(gzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+# bzip2
+type/\(bzip2 compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view bzip2 %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bz2
+
+# bzip
+type/\(bzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view bzip %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bzip
+
+# compress
+type/\(compress'd
+	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+# lz
+type/\(lzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
+
+# lzma
+type/\(LZMA compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view lzma %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lzma
+
+# xz
+type/\(XZ compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view xz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view xz
+
+# zstd
+type/\(Zstandard compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view zst %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zst
+
+# zip
+type/\(Zip archive
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# jar(zip)
+type/i/\(Java\ (Jar\ file|archive)\ data\ \((zip|JAR)\)
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# lha
+type/^LHa\ .*archive
+	Open=%cd %p/ulha://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lha
+
+# PAK
+type/^PAK\ .*archive
+	Open=%cd %p/unar://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view pak
+
+# Parity Archive
+type/^Parity\ Archive\ Volume\ Set
+	Open=/usr/lib/mc/ext.d/archive.sh open par2
 
 # Mailboxes
 type/^ASCII\ mail\ text
@@ -487,6 +574,7 @@ shell/i/.svg
 
 regex/i/\.(wav|snd|voc|au|smp|aiff|snd|m4a|ape|aac|wv)$
 	Open=/usr/lib/mc/ext.d/sound.sh open common
+	View=%view{ascii} /usr/lib/mc/ext.d/sound.sh view common
 
 regex/i/\.(mod|s3m|xm|it|mtm|669|stm|ult|far)$
 	Open=/usr/lib/mc/ext.d/sound.sh open mod
@@ -664,10 +752,10 @@ regex/i/\.djvu?$
 regex/i/\.cb[zr]$
 	Open=/usr/lib/mc/ext.d/doc.sh open comic
 
-# Epub & mobi
-regex/i/\.(epub|mobi)$
-	Open=/usr/lib/mc/ext.d/doc.sh open epub
-	View=%view{ascii} /usr/lib/mc/ext.d/doc.sh view epub
+# Epup, mobi, fb2
+regex/i/\.(epub|mobi|fb2)$
+	Open=/usr/lib/mc/ext.d/doc.sh open ebook
+	View=%view{ascii} /usr/lib/mc/ext.d/doc.sh view ebook
 
 
 ### Miscellaneous ###
@@ -732,92 +820,6 @@ shell/i/.torrent
 
 ### Plain compressed files ###
 
-# ace
-shell/i/.ace
-	Open=%cd %p/uace://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view ace
-	Extract=unace x %f
-
-# arc
-shell/i/.arc
-	Open=%cd %p/uarc://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view arc
-	Extract=arc x %f '*'
-	Extract (with flags)=I=%{Enter any Arc flags:}; if test -n "$I"; then arc x $I %f; fi
-
-# zip
-shell/i/.zip
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
-
-# zip
-type/i/^zip\ archive
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
-
-# jar(zip)
-type/i/^Java\ (Jar\ file|archive)\ data\ \((zip|JAR)\)
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
-
-# zoo
-shell/i/.zoo
-	Open=%cd %p/uzoo://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zoo
-
-# gzip
-type/\(gzip compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
-
-# bzip2
-type/\(bzip2 compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view bzip2 %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bz2
-
-# bzip
-type/\(bzip compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view bzip %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bzip
-
-# compress
-type/\(compress'd
-	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
-
-# lz
-type/\(lzip compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
-
-# lz4
-regex/\.lz4$
-	Open=/usr/lib/mc/ext.d/archive.sh view lz4 %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz4
-
-# lzma
-type/\(LZMA compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view lzma %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lzma
-
-# xz
-type/\(XZ compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view xz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view xz
-
-# zstd
-type/\(Zstandard compressed
-	Open=/usr/lib/mc/ext.d/archive.sh view zst %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zst
-
-# Parity Archive
-type/^Parity\ Archive\ Volume\ Set
-	Open=/usr/lib/mc/ext.d/archive.sh open par2
-
-# WIM
-shell/i/\.wim
-	Open=%cd %p/uwim://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view wim
 
 ### Includes
 # includes should be at end of bindings

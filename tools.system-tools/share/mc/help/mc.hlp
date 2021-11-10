@@ -1186,7 +1186,9 @@ When the subshell support is active, Midnight Commander will spawn a concurrent 
 
 ash/dash users (BusyBox or Debian) may specify startup commands in ~/.local/share/mc/ashrc (fallback ~/.profile).
 
-tcsh, zsh, fish users cannot specify mc-specific startup commands at present. They have to rely on shell-specific startup files.
+zsh users may specify startup commands in ~/.local/share/mc/.zshrc (fallback ~/.zshrc).
+
+tcsh, fish users cannot specify mc-specific startup commands at present. They have to rely on shell-specific startup files.
 
 The following paragraphs are relevant only when the subshell support is active:
 
@@ -1595,7 +1597,14 @@ Examples:
     sftp://joe:password@want.compression.edu/private
     sftp://joe@noncompressed.ssh.edu/private
     sftp://joe@somehost.ssh.edu:2222/private
-[Undelete File System]
+
+When establishing the connection, server key fingerprint is verified using the ~/.ssh/known_hosts file. If the host/key pair is not found or the host is found, but the key doesn't match, an appropriate message is shown. There are three buttons in the message dialog:
+
+[Yes] add new host/key pair to the ~/.ssh/known_hosts file and continue.
+
+[Ignore] do not add new host/key pair to the ~/.ssh/known_hosts file, but continue nevertheless (at you own risk).
+
+[No] abort connection.[Undelete File System]
 Undelete File System
 
 On Linux systems, if you asked configure to use the ext2fs undelete facilities, you will have the undelete file system available. Recovery of deleted files is only available on ext2 file systems. The undelete file system is just an interface to the ext2fs library to retrieve all of the deleted files names on an ext2fs and provides and to extract the selected files into a regular partition.

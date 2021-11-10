@@ -139,17 +139,6 @@ FLUSH TABLES sys.sys_config;
 
 DROP TRIGGER IF EXISTS sys_config_insert_set_user;
 
-DELIMITER $$
-
-CREATE DEFINER='root'@'localhost' TRIGGER sys_config_insert_set_user BEFORE INSERT on sys_config
-    FOR EACH ROW
-BEGIN
-    IF @sys.ignore_sys_config_triggers != true AND NEW.set_by IS NULL THEN
-        SET NEW.set_by = USER();
-    END IF;
-END$$
-
-DELIMITER ;
 
 -- Copyright (c) 2014, Oracle and/or its affiliates. All rights reserved.
 --
@@ -175,18 +164,6 @@ DELIMITER ;
 
 
 DROP TRIGGER IF EXISTS sys_config_update_set_user;
-
-DELIMITER $$
-
-CREATE DEFINER='root'@'localhost' TRIGGER sys_config_update_set_user BEFORE UPDATE on sys_config
-    FOR EACH ROW
-BEGIN
-    IF @sys.ignore_sys_config_triggers != true AND NEW.set_by IS NULL THEN
-        SET NEW.set_by = USER();
-    END IF;
-END$$
-
-DELIMITER ;
 
 -- Copyright (c) 2014, 2015, Oracle and/or its affiliates. All rights reserved.
 --
@@ -11995,7 +11972,7 @@ BEGIN
 
     SET @query = 'DELETE
                     FROM performance_schema.setup_objects
-                   WHERE NOT (OBJECT_TYPE IN (''EVENT'', ''FUNCTION'', ''PROCEDURE'', ''TABLE'', ''TRIGGER'') AND OBJECT_NAME = ''%'' 
+                   WHERE NOT (OBJECT_TYPE IN (''EVENT'', ''FUNCTION'', ''PROCEDURE'', ''TABLE'', ''TRIGGER'') AND OBJECT_NAME = ''%''
                      AND (OBJECT_SCHEMA = ''mysql''              AND ENABLED = ''NO''  AND TIMED = ''NO'' )
                       OR (OBJECT_SCHEMA = ''performance_schema'' AND ENABLED = ''NO''  AND TIMED = ''NO'' )
                       OR (OBJECT_SCHEMA = ''information_schema'' AND ENABLED = ''NO''  AND TIMED = ''NO'' )
