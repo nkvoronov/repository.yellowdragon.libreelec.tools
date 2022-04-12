@@ -1,67 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="tools.poppler"
-       name="poppler"
-       version="10.0.0.9"
-       provider-name="Team LibreELEC">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Poppler is a PDF rendering library based on the xpdf-3.0 code base.</summary>
-    <description>
-Poppler is a PDF rendering library based on the xpdf-3.0 code base.
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
-<addon id="tools.vlc3"
-       name="Vlc Player 3"
-       version="10.0.0.186"
-       provider-name="Team LibreELEC">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>VLC (Version: 3.0.16): is VideoLAN multimedia player and streamer</summary>
-    <description>
-VLC (Version: 3.0.16): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
 <addon id="service.lcdd"
        name="LCDproc"
        version="10.0.0.112"
@@ -120,46 +58,59 @@ LCDproc (0.5dev+2020-07-21) is a piece of software that displays real-time syste
   </extension>
 </addon>
 
-<addon id="service.mariadb"
-       name="MariaDB SQL database server"
-       version="10.0.0.224"
+<addon id="tools.vlc3"
+       name="Vlc Player 3"
+       version="10.0.0.188"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
 
   </requires>
-  <extension point="xbmc.service" library="default.py">
+  <extension point="xbmc.python.script" library="default.py">
     <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>MariaDB is a community-developed fork of the MySQL.</summary>
+    <summary>VLC (Version: 3.0.16): is VideoLAN multimedia player and streamer</summary>
     <description>
-MariaDB (10.7.3) is a fast SQL database server and a drop-in replacement for MySQL.
+VLC (Version: 3.0.16): is the VideoLAN project's media player. It plays MPEG, MPEG2, MPEG4, DivX, MOV, WMV, QuickTime, mp3, Ogg/Vorbis files, DVDs, VCDs, and multimedia streams from various network sources.
     </description>
     <disclaimer>
 
     </disclaimer>
     <platform>all</platform>
     <news>
-104
-- update MariaDB to 10.4.17
 
-103
-- update MariaDB to 10.3.14
-  include mysqldump program
-  add user kodi@localhost to allow localhost connections
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
 
-102
-- do not change password on addon update
+    </assets>
+  </extension>
+</addon>
 
-101
-- update MariaDB to 10.3.12
-  removed optimizer_search_depth from config file to speed it up
-  moved some paths for logs to addon home
-  added alias for service name (mariadb == service.mariadb)
+<addon id="tools.poppler"
+       name="poppler"
+       version="10.0.0.9"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
 
-100
-- initial version
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Poppler is a PDF rendering library based on the xpdf-3.0 code base.</summary>
+    <description>
+Poppler is a PDF rendering library based on the xpdf-3.0 code base.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
     </news>
     <assets>
       <icon>resources/icon.png</icon>
@@ -356,6 +307,112 @@ This bundle currently includes autossh, diffutils, dstat, dtach, efibootmgr, enc
   </extension>
 </addon>
 
+<addon id="service.transmission3"
+       name="Transmission"
+       version="10.0.0.11"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>transmission: a fast, easy and free BitTorrent client</summary>
+    <description>
+transmission(3.00) is a fast, easy and free BitTorrent client
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="service.mariadb"
+       name="MariaDB SQL database server"
+       version="10.0.0.224"
+       provider-name="Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>MariaDB is a community-developed fork of the MySQL.</summary>
+    <description>
+MariaDB (10.7.3) is a fast SQL database server and a drop-in replacement for MySQL.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+104
+- update MariaDB to 10.4.17
+
+103
+- update MariaDB to 10.3.14
+  include mysqldump program
+  add user kodi@localhost to allow localhost connections
+
+102
+- do not change password on addon update
+
+101
+- update MariaDB to 10.3.12
+  removed optimizer_search_depth from config file to speed it up
+  moved some paths for logs to addon home
+  added alias for service name (mariadb == service.mariadb)
+
+100
+- initial version
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="10.0.0" provider-name="YLLOW_DRAGON">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="LibreELEC Tools Yellow Dragon Repository">
+		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">YLLOW_DRAGON addons repository for LibreELEC</summary>
+		<summary lang="ru_RU">Репозиторий дополнений YLLOW_DRAGON для LibreELEC</summary>
+		<summary lang="uk_UA">Репозиторій доповнень YLLOW_DRAGON для LibreELEC</summary>
+		<description lang="en_GB">Download and install YLLOW_DRAGON addons repository.</description>
+		<description lang="ru_RU">Загружайте и устанавливайте дополнения из репозитория YLLOW_DRAGON.</description>
+		<description lang="uk_UA">Завантажуйте та встановлюйте доповненя з репозиторію YLLOW_DRAGON.</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+		</assets>
+		<news></news>
+	</extension>
+</addon>
+
 <addon id="tools.dvb-tools"
        name="DVB Tools"
        version="10.0.0.111"
@@ -428,37 +485,6 @@ This bundle currently includes blindscan-s2, dvb-apps, dvblast, dvbsnoop, mumudv
   </extension>
 </addon>
 
-<addon id="service.transmission3"
-       name="Transmission"
-       version="10.0.0.11"
-       provider-name="Team LibreELEC">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>transmission: a fast, easy and free BitTorrent client</summary>
-    <description>
-transmission(3.00) is a fast, easy and free BitTorrent client
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
 <addon id="service.acestream-engine"
        name="ACE stream engine"
        version="10.0.0.15"
@@ -488,31 +514,5 @@ acestream (Version: 3.1.49): This is an innovative media platform of a new gener
 
     </assets>
   </extension>
-</addon>
-
-<addon id="repository.yellowdragon.libreelec.tools" name="LibreELEC Tools Yellow Dragon Repository" version="10.0.0" provider-name="YLLOW_DRAGON">
-	<requires>
-		<import addon="xbmc.addon" version="12.0.0"/>
-	</requires>
-	<extension point="xbmc.addon.repository" name="LibreELEC Tools Yellow Dragon Repository">
-		<info compressed="false">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/nkvoronov/repository.yellowdragon.libreelec.tools/10.0.0/repo/</datadir>
-		<hashes>false</hashes>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en_GB">YLLOW_DRAGON addons repository for LibreELEC</summary>
-		<summary lang="ru_RU">Репозиторий дополнений YLLOW_DRAGON для LibreELEC</summary>
-		<summary lang="uk_UA">Репозиторій доповнень YLLOW_DRAGON для LibreELEC</summary>
-		<description lang="en_GB">Download and install YLLOW_DRAGON addons repository.</description>
-		<description lang="ru_RU">Загружайте и устанавливайте дополнения из репозитория YLLOW_DRAGON.</description>
-		<description lang="uk_UA">Завантажуйте та встановлюйте доповненя з репозиторію YLLOW_DRAGON.</description>
-		<platform>all</platform>
-		<assets>
-			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
-		</assets>
-		<news></news>
-	</extension>
 </addon>
 </addons>
