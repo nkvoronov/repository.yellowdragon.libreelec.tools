@@ -534,7 +534,7 @@ transmission(3.00) is a fast, easy and free BitTorrent client
 
 <addon id="service.mariadb"
        name="MariaDB SQL database server"
-       version="10.0.0.224"
+       version="10.0.0.225"
        provider-name="Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -546,7 +546,7 @@ transmission(3.00) is a fast, easy and free BitTorrent client
   <extension point="xbmc.addon.metadata">
     <summary>MariaDB is a community-developed fork of the MySQL.</summary>
     <description>
-MariaDB (10.7.3) is a fast SQL database server and a drop-in replacement for MySQL.
+MariaDB (10.8.3) is a fast SQL database server and a drop-in replacement for MySQL.
     </description>
     <disclaimer>
 
