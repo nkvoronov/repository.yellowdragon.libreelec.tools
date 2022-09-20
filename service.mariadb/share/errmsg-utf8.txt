@@ -6190,15 +6190,15 @@ ER_SP_NO_RECURSION
         ger "Rekursive gespeicherte Routinen und Triggers sind nicht erlaubt"
         spa "No autorizadas funciones almacenadas recursivas ni disparadores"
 ER_TOO_BIG_SCALE 42000 S1009
-        chi "指定的大规模%llu为'%-.192s'。最大是%u"
-        eng "Too big scale %llu specified for '%-.192s'. Maximum is %u"
-        ger "Zu großer Skalierungsfaktor %llu für '%-.192s' angegeben. Maximum ist %u"
-        spa "Escala %llu demasiado grande especificada para '%-.192s'. El máximo es de %u"
+        chi "指定的大规模为'%-.192s'。最大是%u"
+        eng "Too big scale specified for '%-.192s'. Maximum is %u"
+        ger "Zu großer Skalierungsfaktor für '%-.192s' angegeben. Maximum ist %u"
+        spa "Escala demasiado grande especificada para '%-.192s'. El máximo es de %u"
 ER_TOO_BIG_PRECISION 42000 S1009
-        chi "指定的精度%llu太大 '%-.192s'。最大是%u"
-        eng "Too big precision %llu specified for '%-.192s'. Maximum is %u"
-        ger "Zu große Genauigkeit %llu für '%-.192s' angegeben. Maximum ist %u"
-        spa "Precisión %llu demasiado grande especificada para '%-.192s'. El máximo es de %u"
+        chi "指定的精度太大 '%-.192s'。最大是%u"
+        eng "Too big precision specified for '%-.192s'. Maximum is %u"
+        ger "Zu große Genauigkeit für '%-.192s' angegeben. Maximum ist %u"
+        spa "Precisión demasiado grande especificada para '%-.192s'. El máximo es de %u"
 ER_M_BIGGER_THAN_D 42000 S1009
         chi "对于FLOAT（M，D），DOUBLE（M，D）或DECIMAL（M，D），M必须> = D（列'%-.192s'）"
         eng "For float(M,D), double(M,D) or decimal(M,D), M must be >= D (column '%-.192s')"
@@ -7535,9 +7535,10 @@ ER_BINLOG_UNSAFE_NONTRANS_AFTER_TRANS
         eng "Statement is unsafe because it accesses a non-transactional table after accessing a transactional table within the same transaction"
         spa "La sentencia no es segura porque accede a una tabla no transaccional tras acceder a una transaccional dentro de la misma transacción"
 ER_MESSAGE_AND_STATEMENT
-        chi "%s语句：%s"
-        eng "%s Statement: %s"
-        spa "%s Sentencia: %s"
+  chi "%s．语句：%s"
+  eng "%s. Statement: %s"
+  spa "%s. Sentencia: %s"
+
 ER_SLAVE_CONVERSION_FAILED
         chi "列%d表'%-.192s.%-.192s'无法从'%-.50s'类型为'%-.50s'"
         eng "Column %d of table '%-.192s.%-.192s' cannot be converted from type '%-.50s' to type '%-.50s'"
@@ -8257,9 +8258,8 @@ ER_INVALID_YEAR_COLUMN_LENGTH
         spa "El tipo de columna YEAR(%lu) está obsoleto. Creando columna YEAR(4) en su lugar"
 
 ER_NOT_VALID_PASSWORD
-        chi "您的密码不满足当前的政策要求"
-        eng "Your password does not satisfy the current policy requirements"
-        spa "Su contraseña no satisface los requerimientos de la política en curso"
+        eng "Your password does not satisfy the current policy requirements (%s)"
+        ukr "Ваш пароль не відповідає поточним правилам (%s)"
 
 ER_MUST_CHANGE_PASSWORD
         bgn "Трябва първо да си смените паролата със SET PASSWORD за да можете да изпълните тази команда"
@@ -8736,9 +8736,9 @@ ER_NO_SUCH_TABLE_IN_ENGINE 42S02
         spa "La tabla '%-.192s.%-.192s' no existe en el motor"
         swe "Det finns ingen tabell som heter '%-.192s.%-.192s' i handlern"
 ER_TARGET_NOT_EXPLAINABLE
+        eng "Target is not executing an operation with a query plan"
         chi "目标未运行可解释的命令"
-        eng "Target is not running an EXPLAINable command"
-        spa "El objetivo no está ejecutando un comando EXPLAINable"
+        spa "El objetivo no está ejecutando una operación con un plan de consulta (query)"
 ER_CONNECTION_ALREADY_EXISTS
         chi "连接'%.*s'与现有连接'%.*s'冲突"
         eng "Connection '%.*s' conflicts with existing connection '%.*s'"
@@ -9444,7 +9444,7 @@ ER_JSON_ESCAPING
         spa "Incorrecta escapatoria en texto JSON en argumento %d a función '%s' en la posicón %d"
 ER_JSON_DEPTH
         chi "超过JSON嵌套深度的%d限制 参数%d 函数'%s' 位置%d的"
-        eng "Limit of %d on JSON nested strucures depth is reached in argument %d to function '%s' at position %d"
+        eng "Limit of %d on JSON nested structures depth is reached in argument %d to function '%s' at position %d"
         spa "El límite de %d en profundidad de estructuras JSON anidadas se ha alcanzado en argumento %d a función '%s' en la posición %d"
 ER_JSON_PATH_EOS
         chi "JSON文本路径错误 参数%d 函数'%s'"
@@ -9460,7 +9460,7 @@ ER_JSON_PATH_DEPTH
         spa "El límite de %d en profundidad de ruta JSON se ha alcanzado en argumento %d a función '%s' en la posición %d"
 ER_JSON_PATH_NO_WILDCARD
         chi "JSON路径中的通配符不允许 参数%d 函数'%s'"
-        eng "Wildcards in JSON path not allowed in argument %d to function '%s'"
+        eng "Wildcards or range in JSON path not allowed in argument %d to function '%s'"
         spa "Comodines en ruta JSON no permitidos en argumento %d a función '%s'"
 ER_JSON_PATH_ARRAY
         chi "JSON路径应当以排列为终 参数%d 函数'%s'"
@@ -10072,3 +10072,5 @@ ER_SF_OUT_INOUT_ARG_NOT_ALLOWED
 	eng "OUT or INOUT argument %d for function %s is not allowed here"
 ER_INCONSISTENT_SLAVE_TEMP_TABLE
         eng "Replicated query '%s' table `%s.%s` can not be temporary"
+ER_VERS_HIST_PART_FAILED
+        eng "Versioned table %`s.%`s: adding HISTORY partition(s) failed"
