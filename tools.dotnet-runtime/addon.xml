@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="tools.dotnet-runtime"
        name="ASP.Net Core Runtimes 5"
-       version="10.0.0.122"
+       version="10.0.0.123"
        provider-name="Anton Voyl (awiouy)">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -13,7 +13,7 @@
   <extension point="xbmc.addon.metadata">
     <summary>ASP.NET Core Runtime</summary>
     <description>
-ASP.NET Core Runtimes (3.1.28) and (5.0.17) enables you to run existing console/web/server applications.
+ASP.NET Core Runtimes (3.1.29) and (5.0.17) enables you to run existing console/web/server applications.
     </description>
     <disclaimer>
 
