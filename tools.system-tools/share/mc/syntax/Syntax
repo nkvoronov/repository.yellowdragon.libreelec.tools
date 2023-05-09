@@ -1,6 +1,20 @@
 # This file describes which highlighting scheme is applied to a particular
 # file in mcedit.
 #
+#
+# System-wide files (this and syntax definitions) are located in
+# /usr/share/mc/syntax/ directory.
+#
+# User's files (this and syntax definitions) are located in
+# ~/.local/share/mc/syntax directory.
+#
+# If user's file is missing, system-wide one is used.
+#
+#
+# This file is rescanned on opening of every new editor file.
+#
+# Format of this file is following.
+#
 # Each entry consists of two lines: a "file" specification and the
 # corresponding highlighting definition ("include"). A file specification
 # can have two or three fields, each separated by white-space characters.
@@ -52,7 +66,7 @@ include ini.syntax
 file ..\*\\.((?i:pl|pm|psgi)|t)$ Perl\sProgram ^#!.\*([\s/]perl|/usr/bin/perl)
 include perl.syntax
 
-file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/media/Devel/data/LibreELEC/build.LibreELEC-Generic.x86_64-10.0.1/toolchain/bin/python)
+file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/home/nikolay/LibreELEC/LibreELEC.tv/build.LibreELEC-Generic.x86_64-11.0.1/toolchain/bin/python)
 include python.syntax
 
 file ..\*\\.(pyx|pxd|pxi)$ Cython\sor\sPyrex\sProgram
@@ -69,6 +83,9 @@ include html.syntax
 
 file ..\*\\.((?i:xml|xsd|xslt?|dtd)|qpg|qpg\\.in)$ XML\sdocument (\\?xml\sversion|!DOCTYPE\s)
 include xml.syntax
+
+file ..\*\\.cir$ Spice\scircuit
+include spice.syntax
 
 file ..\*\\.(?i:tt)$ Template::Toolkit\sFile
 include tt.syntax
@@ -99,6 +116,9 @@ include latex.syntax
 
 file ..\*\\.(?i:texi|texinfo)$ Texinfo\sDocument
 include texinfo.syntax
+
+file ..\*\\.(dot|gv)$ DOT/Graphviz\sgraph
+include dot.syntax
 
 file ..\*\\.c$ C\sProgram
 include c.syntax
@@ -318,6 +338,12 @@ include kotlin.syntax
 
 file ..\*\\.swift$ Swift\sProgram
 include swift.syntax
+
+file ..\*\\.action$ Privoxy\sFile
+include privoxy.syntax
+
+file .\*\\.toml$ TOML\sFile
+include toml.syntax
 
 file .\* unknown
 include unknown.syntax

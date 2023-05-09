@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="tools.dotnet-runtime-legacy"
+       name="ASP.Net Core Runtimes Legacy"
+       version="11.0.0.124"
+       provider-name="Anton Voyl (awiouy)">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>ASP.NET Core Runtime</summary>
+    <description>
+ASP.NET Core Runtimes (3.1.32) and (5.0.17) enables you to run existing console/web/server applications.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+initial release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>

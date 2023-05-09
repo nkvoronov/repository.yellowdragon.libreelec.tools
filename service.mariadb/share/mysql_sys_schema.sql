@@ -82,7 +82,7 @@ SELECT '1.5.1' AS sys_version,
 CREATE TABLE IF NOT EXISTS sys_config (
     variable VARCHAR(128) PRIMARY KEY,
     value VARCHAR(128),
-    set_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    set_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     set_by VARCHAR(128)
 ) ENGINE = Aria;
 
@@ -10983,7 +10983,7 @@ BEGIN
                                        ELSE
                                          -- Use long query time from the server to
                                          -- flag long running statements in red
-                                         IF((timer_wait/1000000000000) > @@long_query_time, 
+                                         IF((timer_wait/1000000000000) > @@log_slow_query_time,
                                             ' style=filled, color=red', 
                                             ' style=filled, color=lightblue')
                                   END
